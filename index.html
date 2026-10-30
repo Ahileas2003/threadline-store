@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover everyday essentials, streetwear, activewear and more at THREADLINE.">
+  <title>THREADLINE — Wear Your Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="announcement">FREE DELIVERY ON ORDERS OVER €75 <span>·</span> NEW SEASON, NEW ENERGY</div>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="THREADLINE home">THREAD<span>LINE</span><i>.</i></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop all</a><a href="#shop" data-filter-link="Women">Women</a><a href="#shop" data-filter-link="Men">Men</a><a href="#shop" data-filter-link="Sportswear">Sportswear</a><a href="#about">Our story</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="search-toggle" aria-label="Search">⌕</button>
+      <button class="cart-trigger" id="open-cart" aria-label="Open shopping bag">BAG <span id="cart-count">0</span></button>
+      <button class="mobile-menu" id="mobile-menu" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+  <div class="search-bar" id="search-bar"><input id="search-input" type="search" placeholder="Search products, categories..." aria-label="Search products"><button id="search-close">Close</button></div>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY EDIT · 2026</p>
+        <h1>Wear your<br><em>own way.</em></h1>
+        <p class="hero-description">Good clothes. Better days. Discover considered essentials, streetwear and active pieces made to move with you.</p>
+        <a class="button button-dark" href="#shop">SHOP THE COLLECTION <span>↗</span></a>
+        <div class="hero-foot"><span>01 / EXPLORE YOUR STYLE</span><span>DESIGNED FOR REAL LIFE</span></div>
+      </div>
+      <div class="hero-image" role="img" aria-label="Fashion editorial featuring modern everyday clothing">
+        <div class="hero-image-label"><span>NEW SEASON</span><strong>EVERYDAY<br>UNIFORM</strong></div>
+      </div>
+      <div class="hero-sticker">STYLE<br>WITHOUT<br>RULES <span>✳</span></div>
+    </section>
+    <section class="benefits" aria-label="Store benefits">
+      <div><span>✳</span> Easy everyday style</div><div><span>↗</span> Secure order process</div><div><span>♡</span> Made for your wardrobe</div><div><span>□</span> Cash on delivery</div>
+    </section>
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR FIT</p><h2>The collection<span>.</span></h2></div><p>From off-duty basics to training-day favourites.<br>Make it yours.</p></div>
+      <div class="shop-controls">
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="filter active" data-filter="All">All items</button><button class="filter" data-filter="Women">Women</button><button class="filter" data-filter="Men">Men</button><button class="filter" data-filter="Sportswear">Sportswear</button><button class="filter" data-filter="Accessories">Accessories</button>
+        </div>
+        <label class="sort-label">SORT BY <select id="sort-select"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name</option></select></label>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>No products found. Try another search or category.</div>
+    </section>
+    <section class="feature-banner">
+      <div class="feature-image"></div>
+      <div class="feature-copy"><p class="eyebrow">LESS THINKING. MORE LIVING.</p><h2>Your wardrobe.<br><em>Your rules.</em></h2><p>Pieces that work hard, feel good and go wherever the day takes you.</p><a href="#shop" class="text-link">FIND YOUR NEXT FAVOURITE ↗</a></div>
+    </section>
+    <section class="newsletter">
+      <p class="eyebrow">THE THREADLINE NOTE</p><h2>A little good style<br>in your inbox.</h2><p>New drops, outfit ideas and the occasional treat.</p>
+      <form id="newsletter-form"><input type="email" id="newsletter-email" placeholder="Your email address" required><button type="submit">SIGN ME UP ↗</button></form><small id="newsletter-message">No spam. Just good things.</small>
+    </section>
+    <section class="about-section" id="about"><p class="eyebrow">OUR POINT OF VIEW</p><h2>Style should feel like <em>you.</em></h2><p>THREADLINE is a demo storefront concept built around versatile clothing for everyday life. Replace the sample products, photos, prices and store details with your own before launching for customers.</p></section>
+  </main>
+  <footer><a class="logo" href="#">THREAD<span>LINE</span><i>.</i></a><span>EVERYDAY STYLE, YOUR WAY.</span><div><a href="#shop">Shop</a><a href="#about">About</a><a href="mailto:alexandrstefanov1@gmail.com">Contact</a></div><small>© <span id="year"></span> THREADLINE. Cash on delivery via Econt. Delivery fee confirmed before dispatch.</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-btn" id="close-cart" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">€0.00</strong></div><p>Econt delivery fee is confirmed before dispatch.</p><button class="button button-dark full-width" id="checkout-button">CONTINUE TO CHECKOUT ↗</button><button class="continue-shopping" id="continue-shopping">Continue shopping</button></div>
+  </aside>
+
+  <div class="modal-wrap" id="checkout-modal" aria-hidden="true">
+    <div class="checkout-modal">
+      <button class="close-btn modal-close" id="close-checkout" aria-label="Close checkout">×</button>
+      <p class="eyebrow">ALMOST YOURS</p><h2>Checkout<span>.</span></h2>
+      <p class="checkout-intro">Choose an Econt office or address. Pay the courier when your order arrives.</p>
+      <form id="checkout-form">
+        <div class="form-grid"><label>Full name *<input name="name" autocomplete="name" required maxlength="100"></label><label>Phone number *<input name="phone" type="tel" autocomplete="tel" required maxlength="40"></label><label class="wide">Email (optional)<input name="email" type="email" autocomplete="email" maxlength="150"></label><label>Delivery method *<select name="deliveryType" required><option value="Econt office">Econt office</option><option value="Econt address delivery">Econt delivery to address</option></select></label><label>City / town *<input name="city" autocomplete="address-level2" required maxlength="100" placeholder="e.g. Sofia"></label><label class="wide">Econt office name or full delivery address *<input name="deliveryDetails" required maxlength="250" placeholder="Office name/address, street and number"></label><label class="wide">Order notes (optional)<textarea name="notes" rows="3" maxlength="500" placeholder="Additional delivery instructions, preferred office, etc."></textarea></label></div>
+        <label class="consent"><input type="checkbox" name="consent" required> I agree that my details can be used to process this order. *</label>
+        <div class="checkout-summary"><span>Order total (before delivery)</span><strong id="checkout-total">€0.00</strong></div>
+        <button class="button button-dark full-width" type="submit" id="place-order">PLACE ORDER · CASH ON DELIVERY</button>
+        <p class="form-message" id="checkout-message" role="status"></p>
+        <small class="privacy-note">Demo shop: configure the order notification function and publish your privacy/returns/delivery policies before accepting real orders.</small>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/products.js"></script><script src="/app.js"></script>
+</body>
+</html>
